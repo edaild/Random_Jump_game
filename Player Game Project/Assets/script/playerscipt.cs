@@ -1,4 +1,5 @@
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -81,6 +82,12 @@ public class playerscipt : MonoBehaviour
         if (collision.gameObject.tag == "Finish Box")
         {
            gameObject.SetActive(false);
+            print("스테이지 클리어");
+        }
+        if(collision.gameObject.tag == "Plane")
+        {
+            gameObject.SetActive(false);
+            print("Game Over");
         }
     }
 
